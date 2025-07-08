@@ -1,0 +1,75 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+h1, h2, h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+article {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+img {
+  display: block;
+  margin: 1rem auto 2rem;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+footer {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #eef3f7;
+  border-left: 4px solid #3498db;
+  border-radius: 8px;
+}
+
+footer h2 {
+  margin-bottom: 1rem;
+}
+
+footer ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
+}
+
+footer a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  article {
+    padding: 1rem;
+  }
+}
