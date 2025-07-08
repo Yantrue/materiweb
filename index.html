@@ -2,10 +2,87 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cara Membuat Web dengan GitHub</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* CSS Langsung di dalam HTML */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      padding: 2rem;
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    article {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    img {
+      display: block;
+      margin: 1rem auto 2rem;
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #eef3f7;
+      border-left: 4px solid #3498db;
+      border-radius: 8px;
+    }
+
+    footer h2 {
+      margin-bottom: 1rem;
+    }
+
+    footer ul {
+      list-style-type: square;
+      padding-left: 1.5rem;
+    }
+
+    footer a {
+      color: #2c3e50;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+
+      article {
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
   <article>
@@ -48,6 +125,40 @@
     </ul>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script>
+    // Notifikasi Selamat Datang
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(() => {
+        alert("Selamat datang! Scroll ke bawah untuk melihat panduan lengkap membuat web di GitHub.");
+      }, 300);
+
+      // Tombol Scroll Ke Atas
+      const scrollBtn = document.createElement("button");
+      scrollBtn.textContent = "↑ Ke Atas";
+      scrollBtn.style.position = "fixed";
+      scrollBtn.style.bottom = "20px";
+      scrollBtn.style.right = "20px";
+      scrollBtn.style.padding = "10px 14px";
+      scrollBtn.style.background = "#3498db";
+      scrollBtn.style.color = "#fff";
+      scrollBtn.style.border = "none";
+      scrollBtn.style.borderRadius = "50px";
+      scrollBtn.style.cursor = "pointer";
+      scrollBtn.style.display = "none";
+      scrollBtn.style.boxShadow = "0 2px 6px rgba(0,0,0,0.2)";
+      scrollBtn.title = "Klik untuk kembali ke atas";
+
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      document.body.appendChild(scrollBtn);
+
+      window.addEventListener("scroll", () => {
+        scrollBtn.style.display = window.scrollY > 200 ? "block" : "none";
+      });
+    });
+  </script>
+
 </body>
 </html>
