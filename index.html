@@ -4,159 +4,81 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cara Membuat Web dengan GitHub</title>
-
   <style>
-    /* CSS Langsung di dalam HTML */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    /* CSS standar */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-      padding: 2rem;
+      background: #f9f9f9; color: #333; line-height: 1.6; padding: 2rem;
     }
-
-    h1, h2 {
-      color: #2c3e50;
-      margin-bottom: 1rem;
-    }
-
-    article {
-      max-width: 800px;
-      margin: auto;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    img {
-      display: block;
-      margin: 1rem auto 2rem;
-      max-width: 100%;
-      height: auto;
-      border-radius: 6px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    }
-
-    footer {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 2rem;
-      background: #eef3f7;
-      border-left: 4px solid #3498db;
-      border-radius: 8px;
-    }
-
-    footer h2 {
-      margin-bottom: 1rem;
-    }
-
-    footer ul {
-      list-style-type: square;
-      padding-left: 1.5rem;
-    }
-
-    footer a {
-      color: #2c3e50;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
+    h1, h2 { color: #2c3e50; margin-bottom: 1rem; }
+    article { max-width: 800px; margin: auto; background: #fff;
+      padding: 2rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);}
+    img { display: block; margin: 1rem auto 2rem; max-width: 100%;
+      height: auto; border-radius: 6px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);}
+    footer { max-width: 800px; margin: 3rem auto; padding: 2rem;
+      background: #eef3f7; border-left: 4px solid #3498db; border-radius: 8px;}
+    footer h2 { margin-bottom: 1rem; }
+    footer ul { list-style-type: square; padding-left: 1.5rem; }
+    footer a { color: #2c3e50; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
     @media screen and (max-width: 768px) {
-      body {
-        padding: 1rem;
-      }
-
-      article {
-        padding: 1rem;
-      }
+      body, article { padding: 1rem; }
     }
   </style>
 </head>
-
 <body>
 
   <article>
     <h1>Pendahuluan: Apa itu GitHub Pages?</h1>
-    <img src="images/github-pages-ui.png" alt="GitHub Pages UI">
+    <img src="images/github-pages-ui.png" alt="Screenshot GitHub Pages UI">
     <p>GitHub Pages adalah layanan hosting website statis gratis dari GitHub. Cocok untuk portofolio, dokumentasi, atau blog pribadi.</p>
 
     <h2>1. Syarat Awal</h2>
-    <img src="images/github-signup.png" alt="Sign Up GitHub">
-    <p>Siapkan akun GitHub dan repository dengan nama <code>username.github.io</code>.</p>
+    <img src="images/pages-settings.png" alt="UI Settings GitHub Pages">
+    <p>Siapkan akun GitHub dan repository dengan nama <code>username.github.io</code>. Aktifkan Pages melalui Settings → Pages.</p>
 
-    <h2>2. Membuat Repository</h2>
-    <img src="images/create-repo.png" alt="Buat repository GitHub">
-    <p>Login ke GitHub, klik <strong>New Repository</strong>, dan beri nama seperti <code>username.github.io</code>.</p>
+    <h2>2. Tampilan Responsif</h2>
+    <img src="images/mobile-preview.png" alt="Preview GitHub Pages di perangkat mobile">
+    <p>GitHub Pages otomatis responsif. Kamu bisa cek lewat preview mobile dan desktop.</p>
 
-    <h2>3. Buat Index.html dan Upload</h2>
-    <img src="images/index-file.png" alt="Contoh index.html">
-    <p>Buat file <code>index.html</code> di komputer lokal, lalu push ke repository GitHub menggunakan Git atau GitHub Desktop.</p>
+    <h2>3. Opsional: Tema Gelap / Dark‑Mode</h2>
+    <img src="images/dark-mode-code.png" alt="Contoh tampilan kode dark mode GitHub">
+    <p>Kamu bisa menambahkan tema gelap atau PWA untuk meningkatkan pengalaman pengguna.</p>
 
-    <h2>4. Aktifkan GitHub Pages</h2>
-    <img src="images/pages-setting.png" alt="GitHub Pages Setting">
-    <p>Masuk ke <strong>Settings → Pages</strong>, pilih branch <code>main</code>, lalu klik Save. Tunggu beberapa saat, web akan aktif di <code>https://username.github.io</code>.</p>
+    <h2>4. Tambahkan Struktur dan Script</h2>
+    <p>Gunakan folder <code>css/</code> dan <code>js/</code> untuk menata tampilan dan menambahkan interaksi, seperti tombol "Ke Atas".</p>
 
-    <h2>5. Tambahkan CSS & JavaScript</h2>
-    <img src="images/css-js.png" alt="Tambahkan CSS JS">
-    <p>Gunakan folder <code>css</code> dan <code>js</code> untuk menata dan menambahkan interaksi ke websitemu.</p>
-
-    <h2>6. Kesimpulan</h2>
-    <img src="images/final-web.png" alt="Website Final">
-    <p>GitHub Pages adalah cara mudah, cepat, dan gratis untuk mempublikasikan situs web statis tanpa hosting berbayar.</p>
+    <h2>5. Kesimpulan</h2>
+    <p>Dengan gambar UI asli, pembaca bisa lebih mudah memahami setiap langkah aktivasi GitHub Pages dan preview websitenya.</p>
   </article>
 
   <footer>
     <h2>📚 Daftar Pustaka</h2>
     <ul>
-      <li><a href="https://www.petanikode.com/github-pages/">PetaniKode</a></li>
-      <li><a href="https://learn.microsoft.com/id-id/training/modules/create-host-web-sites-github-pages/">Microsoft Learn</a></li>
-      <li><a href="https://medium.com/@HazuliFidastian/membuat-website-dengan-github-f7b6cd645bf8">Medium - Hazuli</a></li>
-      <li><a href="https://codepolitan.com/blog/membuat-website-statis-gratis-dengan-memanfaatkan-github-pages">CodePolitan</a></li>
+      <li><a href="https://pages.github.com/">GitHub Pages</a></li>
+      <li><a href="https://docs.github.com/en/pages">GitHub Docs – Pages</a></li>
+      <li><a href="https://christianheilmann.com/2022/01/13/turning-a-github-page-into-a-progressive-web-app/">Christian Heilmann – PWA di GitHub Pages</a></li>
+      <li><a href="https://speckyboy.com/designing-custom-github-demo-pages/">Speckyboy – Custom Demo Pages</a></li>
     </ul>
   </footer>
 
   <script>
-    // Notifikasi Selamat Datang
-    document.addEventListener("DOMContentLoaded", function () {
-      setTimeout(() => {
-        alert("Selamat datang! Scroll ke bawah untuk melihat panduan lengkap membuat web di GitHub.");
-      }, 300);
+    document.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => alert("Selamat datang! Scroll ke bawah untuk panduan lengkap menggunakan GitHub Pages."), 300);
 
-      // Tombol Scroll Ke Atas
-      const scrollBtn = document.createElement("button");
-      scrollBtn.textContent = "↑ Ke Atas";
-      scrollBtn.style.position = "fixed";
-      scrollBtn.style.bottom = "20px";
-      scrollBtn.style.right = "20px";
-      scrollBtn.style.padding = "10px 14px";
-      scrollBtn.style.background = "#3498db";
-      scrollBtn.style.color = "#fff";
-      scrollBtn.style.border = "none";
-      scrollBtn.style.borderRadius = "50px";
-      scrollBtn.style.cursor = "pointer";
-      scrollBtn.style.display = "none";
-      scrollBtn.style.boxShadow = "0 2px 6px rgba(0,0,0,0.2)";
-      scrollBtn.title = "Klik untuk kembali ke atas";
-
-      scrollBtn.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+      const btn = document.createElement("button");
+      btn.textContent = "↑ Ke Atas";
+      Object.assign(btn.style, {
+        position: "fixed", bottom: "20px", right: "20px",
+        padding: "10px 14px", background: "#3498db", color: "#fff",
+        border: "none", borderRadius: "50px", cursor: "pointer",
+        display: "none", boxShadow: "0 2px 6px rgba(0,0,0,0.2)"
       });
-
-      document.body.appendChild(scrollBtn);
-
-      window.addEventListener("scroll", () => {
-        scrollBtn.style.display = window.scrollY > 200 ? "block" : "none";
-      });
+      btn.title = "Klik untuk kembali ke atas";
+      btn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+      document.body.appendChild(btn);
+      window.addEventListener("scroll", () => btn.style.display = window.scrollY > 200 ? "block" : "none");
     });
   </script>
 
